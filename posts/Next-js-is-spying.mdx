@@ -1,0 +1,18 @@
+---
+title: Next.js automatically collects developers data
+description: 'Did you know that if you are building on top of Next.js you may be getting your private data stolen? '
+date: May 4 2021
+---
+
+Next.js automatically scrapes data from the code and environment without the permission of the developer or agency they work for. Maybe it is nefarious, maybe not, but in this day and age I would rather just disable it and not have to worry about it..
+
+Luckily enough, it is rather easy to disable these shenanigans. From the root directory run the following command
+
+    // Some comments
+    npx next telemetry disable
+    # Or
+    yarn next telemetry disable
+
+For more information about Next.js's telemetry data collection visit [link]https://nextjs.org/telemetry
+
+Go back [home](/).
