@@ -8,8 +8,6 @@ To get started with Node.js check our the official docs @ Https://nodejs.org
 
 There you will find the code for a basic and minimal server.
 
-Next we Will add static resource rendering(html, css, client side js.)
-
      // Some comments
      const http = require('http');
 
@@ -22,9 +20,23 @@ Next we Will add static resource rendering(html, css, client side js.)
     res.end('Hello World');
     });
 
-server.listen(port, hostname, () => {
-console.log(`Server running at http://${hostname}:${port}/`);
-});
+    server.listen(port, hostname, () => {
+    console.log(`Server running at http://${hostname}:${port}/`);
+    });
+
+Next lets add express
+
+npm i express
+
+bring in express module
+
+add the following code to serve static assets
+
+    //
+    app.use(express.static('public'));
+
+Also, you will need to add a pulic folder in the app root directory
+
 This is an example post, with a [link](https://nextjs.org) and a React component:
 
 The title and description are pulled from the MDX file and processed using `gray-matter`. Additionally, links are rendered using a custom component passed to `next-mdx-remote`.
